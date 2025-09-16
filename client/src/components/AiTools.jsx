@@ -7,7 +7,7 @@ const AiTools = () => {
     const navigate = useNavigate()
     const { user } = useUser();
     return (
-        <div className='px-4 sm:px-20 xl:px-32 py-28' id='ai-tools'>
+        <div className='px-4 sm:px-20 xl:px-32 py-20' id='ai-tools'>
             <div className='text-center'>
                 <h2 className='text-primary text-3xl md:text-5xl font-semibold'>Powerful AI Tools</h2>
                 <p className='text-slate-500 max-w-lg py-4 mx-auto'>Everything you need to create, enhance and optimize you content with cutting-edge Ai technology.</p>
