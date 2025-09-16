@@ -14,6 +14,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import { Toaster } from "react-hot-toast"
 import { useAuth } from "@clerk/clerk-react"
+import PrivacyPolicy from "./pages/PrivacyPocily"
 
 function App() {
   const {getToken} = useAuth()
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/about-us" element={<About/>}/>
         <Route path="/contact-us" element={<Contact/>}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
         <Route path="/ai" element={<Layout/>}>
           <Route index element={<Dashboard/>}/>
           <Route path="/ai/write-article" element={<WriteArticle/>}/>

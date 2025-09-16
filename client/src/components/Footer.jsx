@@ -26,7 +26,7 @@ export default function Footer() {
                 <a href="/contact-us">Contact us</a>
               </li>
               <li>
-                <a href="/policy">Privacy policy</a>
+                <a href="/privacy-policy">Privacy policy</a>
               </li>
             </ul>
           </div>
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="pt-4 text-center text-xs md:text-sm pb-5">
-        Copyright 2025 © Genify | All Right Reserved.
+        Copyright 2025 © Genify. All Rights Reserved. <br/> Developed by Priyatam.
       </p>
     </footer>
   );
