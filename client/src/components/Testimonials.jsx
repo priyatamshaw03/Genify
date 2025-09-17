@@ -1,4 +1,5 @@
 import { assets } from "../assets/assets";
+import { Star } from "lucide-react"; // Import star icon
 
 const Testimonials = () => {
   const cardsData = [
@@ -9,6 +10,7 @@ const Testimonials = () => {
       handle: "@neilstellar",
       testimonial:
         "Genify makes content creation effortless — I can generate high-quality drafts in minutes!",
+      rating: 5,
     },
     {
       image:
@@ -17,6 +19,7 @@ const Testimonials = () => {
       handle: "@averywrites",
       testimonial:
         "The AI image generation tool is my favorite — it’s like having a personal designer on demand.",
+      rating: 4,
     },
     {
       image:
@@ -25,6 +28,7 @@ const Testimonials = () => {
       handle: "@jordantalks",
       testimonial:
         "From blog titles to resume reviews, Genify saves me hours every week!",
+      rating: 3,
     },
     {
       image:
@@ -33,6 +37,7 @@ const Testimonials = () => {
       handle: "@taycreates",
       testimonial:
         "The background and object removal tools are a game-changer for my design projects.",
+      rating: 5,
     },
   ];
 
@@ -49,7 +54,20 @@ const Testimonials = () => {
           <span className="text-xs text-slate-500">{card.handle}</span>
         </div>
       </div>
-      <p className="text-sm py-4 text-gray-700">{card.testimonial}</p>
+
+      {/* Rating stars */}
+      <div className="flex items-center gap-1 py-2">
+      {[...Array(5)].map((_, i) => (
+        <img
+          key={i}
+          src={i < card.rating ? assets.star_icon : assets.star_dull_icon}
+          alt="star"
+          className="w-4 h-4"
+        />
+      ))}
+    </div>
+
+      <p className="text-sm py-2 text-gray-700">{card.testimonial}</p>
     </div>
   );
 
@@ -102,4 +120,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials
+export default Testimonials;
