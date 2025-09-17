@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import {Route, Routes} from 'react-router-dom'
 import Home from "./pages/Home"
 import Layout from "./pages/Layout"
@@ -13,14 +13,10 @@ import Community from "./pages/Community"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import { Toaster } from "react-hot-toast"
-import { useAuth } from "@clerk/clerk-react"
 import PrivacyPolicy from "./pages/PrivacyPocily"
 
 function App() {
-  const {getToken} = useAuth()
-  useEffect(()=>{
-    getToken().then(()=>console.log(token))
-  })
+  
   return (
     <div>
       <Toaster/>
@@ -39,7 +35,6 @@ function App() {
           <Route path="/ai/review-resume" element={<ReviewResume/>}/>
           <Route path="/ai/community" element={<Community/>}/>
         </Route>
-
       </Routes>
     </div>
   )
